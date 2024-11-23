@@ -93,7 +93,7 @@ Here are the deployed addresses:
    - Link explorer: https://explorer.cronos.org/testnet/address/0x1d8c981fd95060a45b3cea346dbf7b5b48f5cd36
 
 - RewardToken deployed to: 0xf1979Ac32D086D1f3f3773fe0828d37729ed545f
-   -Link to the explorer: https://explorer.cronos.org/testnet/address/0xf1979ac32d086d1f3f3773fe0828d37729ed545f
+   - Link to the explorer: https://explorer.cronos.org/testnet/address/0xf1979ac32d086d1f3f3773fe0828d37729ed545f
 
 
 ## Testing
