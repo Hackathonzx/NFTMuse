@@ -56,9 +56,9 @@ Manages the reward token used to incentivize community engagement:
 **Setup**
 Clone the repository.
 
-git clone https://github.com/Hackathonzx/cryptominds.git
+git clone https://github.com/Hackathonzx/NFTMuse.git
 
-cd cryptominds
+cd NFTMuse
 
 **Install dependencies:**
 
@@ -87,13 +87,13 @@ npx hardhat run ignition/modules/deploy.js --network cronosTestnet
 Here are the deployed addresses:
 
 - NFTMint deployed to: 0x41CD3d7753eeAD4c2d384a6C0074eA4c27dE36F1
-- Link to the explorer: https://explorer.cronos.org/testnet/address/0x41cd3d7753eead4c2d384a6c0074ea4c27de36f1
+   - Link to the explorer: https://explorer.cronos.org/testnet/address/0x41cd3d7753eead4c2d384a6c0074ea4c27de36f1
 
 - NFTMarketplace deployed to: 0x1d8c981FD95060A45b3Cea346DbF7b5b48f5CD36
-- Link explorer: https://explorer.cronos.org/testnet/address/0x1d8c981fd95060a45b3cea346dbf7b5b48f5cd36
+   - Link explorer: https://explorer.cronos.org/testnet/address/0x1d8c981fd95060a45b3cea346dbf7b5b48f5cd36
 
 - RewardToken deployed to: 0xf1979Ac32D086D1f3f3773fe0828d37729ed545f
--Link to the explorer: https://explorer.cronos.org/testnet/address/0xf1979ac32d086d1f3f3773fe0828d37729ed545f
+   -Link to the explorer: https://explorer.cronos.org/testnet/address/0xf1979ac32d086d1f3f3773fe0828d37729ed545f
 
 
 ## Testing
