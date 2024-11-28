@@ -18,159 +18,106 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import SecurityIcon from '@mui/icons-material/Security';
 import LinkIcon from '@mui/icons-material/Link';
 
+
 const SettingsPage = () => {
-  const [notificationsEnabled, setNotificationsEnabled] = React.useState(true);
-
-  const handleToggleNotifications = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
-    setNotificationsEnabled(event.target.checked);
-  };
-
   return (
-    <Box sx={{ width: '100%', maxWidth: 700, margin: 'auto', p: 3, bgcolor: '#fff' }}>
+    <Box className="settings-page">
       <Typography variant="h4" gutterBottom>
         Settings
       </Typography>
-      
-
-      {/* Profile Settings */}
-      <List>
-        <ListItem>
+      <List className="settings-list">
+        <ListItem className="settings-list-item">
           <ListItemIcon>
             <AccountCircleIcon />
           </ListItemIcon>
-          <ListItemText primary="Profile" />
+          <ListItemText primary="Account" secondary="Manage your account details" />
         </ListItem>
-        <TextField label="Username" defaultValue="nft_enthusiast" fullWidth margin="normal" />
-        <TextField label="Email" defaultValue="user@example.com" fullWidth margin="normal" />
-        <Box sx={{ display: 'flex', alignItems: 'center', mt: 2 }}>
-          <Avatar sx={{ width: 60, height: 60, mr: 2 }}>
-            {/* Placeholder for user image */}
-          </Avatar>
-          <Typography variant="body2">Change Profile Picture</Typography>
-        </Box>
-      </List>
-      <Divider />
-
-      {/* Notification Settings */}
-      <List>
-        <ListItem>
+        <Divider />
+        <ListItem className="settings-list-item">
           <ListItemIcon>
             <NotificationsIcon />
           </ListItemIcon>
-          <ListItemText primary="Notifications" />
+          <ListItemText primary="Notifications" secondary="Customize your notification preferences" />
+          <Switch defaultChecked /> {/* Example Switch */}
         </ListItem>
-        <ListItem>
-          <ListItemText primary="Enable Notifications" />
-          <Switch
-            checked={notificationsEnabled}
-            onChange={handleToggleNotifications}
-            inputProps={{ 'aria-label': 'controlled' }}
-          />
-        </ListItem>
-      </List>
-      <Divider />
-
-      {/* Security Settings */}
-      <List>
-        <ListItem>
+        <Divider />
+        <ListItem className="settings-list-item">
           <ListItemIcon>
             <SecurityIcon />
           </ListItemIcon>
-          <ListItemText primary="Security" />
+          <ListItemText primary="Security" secondary="Update your password and security settings" />
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="Change Password" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Two-Factor Authentication" />
-        </ListItem>
-      </List>
-      <Divider />
-
-      {/* Connection Settings */}
-      <List>
-        <ListItem>
+        <Divider />
+        <ListItem className="settings-list-item">
           <ListItemIcon>
             <LinkIcon />
           </ListItemIcon>
-          <ListItemText primary="Connections" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Connect to Wallet" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Manage Connected Apps" />
+          <ListItemText primary="Linked Accounts" secondary="Manage your connected accounts" />
         </ListItem>
       </List>
     </Box>
   );
 };
 
+export default SettingsPage;
 
-{/* Add CSS styles using the sx prop for responsiveness */}
-<style jsx>
-{`
-  .settings-page {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .settings-list {
-    padding: 0;
-  }
-
-  .settings-list-item {
-    padding: 16px 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .settings-list-item:last-child {
-    border-bottom: none;
-  }
-
-  .settings-list-item button {
-    width: 100%;
-    text-align: left;
-  }
-
-  /* Media queries for responsiveness */
-  @media (max-width: 768px) {
+<style jsx global>
+  {`
     .settings-page {
-      padding: 10px;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .settings-list {
+      padding: 0;
     }
 
     .settings-list-item {
-      padding: 12px 0;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .settings-page {
-      padding: 5px;
+      padding: 16px 0;
+      border-bottom: 1px solid #eee;
     }
 
-    .settings-list-item {
-      padding: 8px 0;
+    .settings-list-item:last-child {
+      border-bottom: none;
     }
-  }
 
-  /* CSS transitions for hover effects */
-  .settings-list-item button:hover {
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
-  }
+    .settings-list-item button {
+      width: 100%;
+      text-align: left;
+    }
 
-  .settings-list-item button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-  }
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+      .settings-page {
+        padding: 10px;
+      }
 
-  .switch-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-`}
+      .settings-list-item {
+        padding: 12px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .settings-page {
+        padding: 5px;
+      }
+
+      .settings-list-item {
+        padding: 8px 0;
+      }
+    }
+
+    /* CSS transitions for hover effects */
+    .settings-list-item button:hover {
+      background-color: #f0f0f0;
+      transition: background-color 0.3s ease;
+    }
+
+    .settings-list-item button:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+  `}
 </style>
