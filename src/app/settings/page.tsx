@@ -26,7 +26,7 @@ const SettingsPage = () => {
   };
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 700, margin: 'auto', p: 3 }}>
+    <Box sx={{ width: '100%', maxWidth: 700, margin: 'auto', p: 3, bgcolor: '#fff' }}>
       <Typography variant="h4" gutterBottom>
         Settings
       </Typography>
@@ -106,4 +106,71 @@ const SettingsPage = () => {
   );
 };
 
-export default SettingsPage;
+
+{/* Add CSS styles using the sx prop for responsiveness */}
+<style jsx>
+{`
+  .settings-page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .settings-list {
+    padding: 0;
+  }
+
+  .settings-list-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .settings-list-item:last-child {
+    border-bottom: none;
+  }
+
+  .settings-list-item button {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .settings-page {
+      padding: 10px;
+    }
+
+    .settings-list-item {
+      padding: 12px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .settings-page {
+      padding: 5px;
+    }
+
+    .settings-list-item {
+      padding: 8px 0;
+    }
+  }
+
+  /* CSS transitions for hover effects */
+  .settings-list-item button:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+
+  .settings-list-item button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+
+  .switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`}
+</style>

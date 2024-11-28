@@ -33,22 +33,22 @@ const recentActivity = [
 const Dashboard: React.FC = () => {
 
   return (
-    <Box sx={{ flexGrow: 1, padding: 3 }}> 
-      <Typography variant="h4" gutterBottom>
+    <div style={{ padding: '20px' }}>
+      <Typography variant="h4" gutterBottom sx={{ textAlign: 'center' }}>
         Dashboard
       </Typography>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={3} sx={{ flexGrow: 1 }}>
         {/* User Profile Section */}
-        <Grid item xs={12} md={4}>
-          <Card>
+        <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Card sx={{ transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.05)' } }}>
             <CardContent>
               <Box display="flex" flexDirection="column" alignItems="center">
                 <Avatar
                   sx={{ bgcolor: deepPurple[500], width: 80, height: 80 }}
-                  src={user.profilePicture} 
+                  src={user.profilePicture}
                 >
-                  {user.name.charAt(0)} 
+                  {user.name.charAt(0)}
                 </Avatar>
                 <Typography variant="h6" gutterBottom>
                   {user.name}
@@ -68,8 +68,8 @@ const Dashboard: React.FC = () => {
         </Grid>
 
         {/* Goals Section */}
-        <Grid item xs={12} md={4}>
-          <Card>
+        <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Card sx={{ transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.05)' } }}>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 Goals
@@ -81,9 +81,9 @@ const Dashboard: React.FC = () => {
                   </Typography>
                   <Box flexGrow={1} /> {/* Pushes the icon to the right */}
                   {goal.completed ? (
-                    <Typography  color="green">&#10003;</Typography>
+                    <Typography color="green">&#10003;</Typography>
                   ) : (
-                    <Typography color="error">&#10005;</Typography> 
+                    <Typography color="error">&#10005;</Typography>
                   )}
                 </Box>
               ))}
@@ -92,8 +92,8 @@ const Dashboard: React.FC = () => {
         </Grid>
 
         {/* Recent Activity Section */}
-        <Grid item xs={12} md={4}>
-          <Card>
+        <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Card sx={{ transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.05)' } }}>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 Recent Activity
@@ -101,7 +101,7 @@ const Dashboard: React.FC = () => {
               {recentActivity.map((activity, index) => (
                 <Box key={index} display="flex" alignItems="center" mb={1}>
                   <Typography variant="body2" color="text.secondary">
-                    {activity.timestamp} - 
+                    {activity.timestamp} -
                   </Typography>
                   <Typography variant="body2" component="a" href={activity.link}>
                     {activity.action}
@@ -113,8 +113,8 @@ const Dashboard: React.FC = () => {
         </Grid>
 
         {/* Collection Stats / Charts Section */}
-        <Grid item xs={12} md={6}>
-          <Card>
+        <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Card sx={{ transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.05)' } }}>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 Collection Stats
@@ -128,8 +128,8 @@ const Dashboard: React.FC = () => {
         </Grid>
 
         {/* Marketplace Activity / Recommendations Section */}
-        <Grid item xs={12} md={6}>
-          <Card>
+        <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Card sx={{ transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.05)' } }}>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 Marketplace Activity
@@ -143,8 +143,8 @@ const Dashboard: React.FC = () => {
         </Grid>
 
         {/* Featured NFTs / Collections Section */}
-        <Grid item xs={12}>
-          <Card>
+        <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Card sx={{ transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.05)' } }}>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 Featured NFTs
@@ -157,7 +157,7 @@ const Dashboard: React.FC = () => {
           </Card>
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 };
 
