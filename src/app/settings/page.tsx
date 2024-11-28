@@ -30,6 +30,7 @@ const SettingsPage = () => {
       <Typography variant="h4" gutterBottom>
         Settings
       </Typography>
+      
 
       {/* Profile Settings */}
       <List>
