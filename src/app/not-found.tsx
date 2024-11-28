@@ -4,9 +4,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-interface NotFoundProps {
-    // Add any props specific to your component here, if needed
-}
 
 const NotFoundContainer = styled.div`
     display: flex;
@@ -46,7 +43,7 @@ const StyledLink = styled(Link)`
 `;
 
 
-const NotFound: React.FC<NotFoundProps> = () => {
+const NotFound: React.FC = () => {
     return (
         <NotFoundContainer>
             <Heading>404</Heading>
