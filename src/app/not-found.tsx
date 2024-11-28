@@ -10,6 +10,7 @@ let Paragraph: any;
 let StyledLink: any;
 
 
+
 if (typeof document !== 'undefined') {
     NotFoundContainer = styled.div`
         display: flex;
