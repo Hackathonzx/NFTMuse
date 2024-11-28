@@ -110,8 +110,8 @@ export default function Home() {
                   primary="NFTMint"
                   secondary={
                     <React.Fragment>
-                      Address: 0x... {/* Replace with actual address */}
-                      <a href="https://cronos.org/explorer/" target="_blank" rel="noopener noreferrer">
+                      Address: 0x41CD3d7753eeAD4c2d384a6C0074eA4c27dE36F1 {/* Replace with actual address */}
+                      <a href="https://explorer.cronos.org/testnet/address/0x41cd3d7753eead4c2d384a6c0074ea4c27de36f1" target="_blank" rel="noopener noreferrer">
                         (Cronos Explorer)
                       </a>
                     </React.Fragment>
@@ -123,8 +123,8 @@ export default function Home() {
                   primary="NFTMarketplace"
                   secondary={
                     <React.Fragment>
-                      Address: 0x... {/* Replace with actual address */}
-                      <a href="https://cronos.org/explorer/" target="_blank" rel="noopener noreferrer">
+                      Address: 0x1d8c981FD95060A45b3Cea346DbF7b5b48f5CD36 {/* Replace with actual address */}
+                      <a href="https://explorer.cronos.org/testnet/address/0x1d8c981fd95060a45b3cea346dbf7b5b48f5cd36" target="_blank" rel="noopener noreferrer">
                         (Cronos Explorer)
                       </a>
                     </React.Fragment>
@@ -136,8 +136,8 @@ export default function Home() {
                   primary="RewardToken"
                   secondary={
                     <React.Fragment>
-                      Address: 0x... {/* Replace with actual address */}
-                      <a href="https://cronos.org/explorer/" target="_blank" rel="noopener noreferrer">
+                      Address: 0xf1979Ac32D086D1f3f3773fe0828d37729ed545f {/* Replace with actual address */}
+                      <a href="https://explorer.cronos.org/testnet/address/0xf1979ac32d086d1f3f3773fe0828d37729ed545f" target="_blank" rel="noopener noreferrer">
                         (Cronos Explorer)
                       </a>
                     </React.Fragment>
