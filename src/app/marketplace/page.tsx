@@ -34,12 +34,12 @@ const Marketplace = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   // Handle search input change
-  const handleSearchChange = (event) => {
+  const handleSearchChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSearchTerm(event.target.value);
   };
 
   // Handle category selection change
-  const handleCategoryChange = (event) => {
+  const handleCategoryChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelectedCategory(event.target.value);
   };
 

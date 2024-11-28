@@ -21,7 +21,7 @@ import LinkIcon from '@mui/icons-material/Link';
 const SettingsPage = () => {
   const [notificationsEnabled, setNotificationsEnabled] = React.useState(true);
 
-  const handleToggleNotifications = (event) => {
+  const handleToggleNotifications = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
     setNotificationsEnabled(event.target.checked);
   };
 
