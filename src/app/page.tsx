@@ -16,8 +16,16 @@ import {
 
 // Replace with your 3D model or animation component (Placeholder)
 const ThreeDModel = () => (
-  <Box sx={{ height: 300, bgcolor: 'grey.300', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-    <Typography variant="h6">3D Model Placeholder</Typography>
+  <Box
+    sx={{
+      height: 300,
+      bgcolor: 'grey.300',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    <img src="/nftmuse.jpg" alt="3D Model" style={{ maxWidth: '100%', maxHeight: '100%' }} />
   </Box>
 );
 
@@ -53,6 +61,17 @@ export default function Home() {
             >
               Marketplace
             </Button>
+
+            <Button
+              component={Link}
+              to="/settings"
+              variant="contained"
+              color="primary"
+              sx={{ transition: 'transform 0.2s ease', ':hover': { transform: 'scale(1.05)' } }}
+            >
+              Account
+            </Button>
+
           </Box>
         </Box>
 
